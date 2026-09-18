@@ -14,6 +14,7 @@
 html {
   scroll-behavior: smooth;
   height: 200vh;
+  margin: 0 auto;
 }
 
 .navbar {
