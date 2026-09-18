@@ -1,0 +1,41 @@
+:root {
+  --placeholder: #fff;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 200vh;
+}
+
+.navbar {
+  padding: 2rem;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav a:hover {
+  color: blue;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+}
