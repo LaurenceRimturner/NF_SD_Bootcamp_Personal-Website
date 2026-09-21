@@ -15,6 +15,32 @@ html {
   height: 200vh;
 }
 
+/* Structure */
+
+.section {
+  padding: 15vh 0;
+  scroll-margin-top: 10vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1650px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+[class*="col"] {
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem;
+}
+
 /* Responsive breakpoints */
 
 @media screen and (min-width: 576px) {
@@ -335,28 +361,51 @@ html {
   }
 }
 
-/* Navigation */
-
+/* Navigation Base */
 .navbar {
-  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.125);
+  backdrop-filter: blur(5px);
+  padding: 1rem;
+  border-radius: 50px;
+  max-height: 85px;
+  width: 50%;
+  transition: all 0.4s ease-in-out;
+
+  position: fixed;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
 }
 
+.navbar.is_sticky {
+  top: 2rem;
+  box-shadow: rgba(22, 22, 29, 0.2) 0 0 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Listen-Layout */
 nav ul {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
   gap: 10px;
+  margin: 0;
+  padding: 0;
 }
 
 nav li {
   list-style: none;
-}
-
-nav a:hover {
-  color: blue;
+  font-size: 20px;
+  font-family: monospace;
 }
 
 nav a {
   text-decoration: none;
   color: #000;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: blue;
 }
